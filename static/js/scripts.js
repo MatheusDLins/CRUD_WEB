@@ -1,1 +1,5 @@
-/* ainda sem função */
+$(document).ready(function(){
+
+    console.log('funcinouuuuuuuu')
+
+});

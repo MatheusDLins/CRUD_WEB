@@ -11,9 +11,10 @@
         </div>
     </a>
     <div class="col-9 search-div">
-        
-        <input class="form-control" type="text" id="search" name="search" placeholder="Nome da atividade">
-        <i class="fas fa-search"></i>
+        <form methodn="GET">
+            <input class="form-control" type="text" id="search" name="search" placeholder="Nome da atividade">
+            <i class="fas fa-search"></i>
+        </form>
     </div>
     {% if messages %}
         <ul class="messages">
