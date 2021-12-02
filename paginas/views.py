@@ -8,7 +8,6 @@ from .forms import TaskForm
 from django.contrib import messages
 
 
-@login_required
 def taskList(request):
     tasks_list = Task.objects.all().order_by('-created_at')
 
