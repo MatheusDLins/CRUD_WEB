@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Task
 from .forms import TaskForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -19,6 +20,7 @@ def newTask(request):
         form = TaskForm(request.POST)
 
         if form.is_valid():
+            messages.info(request, 'Atividade criada com sucesso.')
             task = form.save(commit=False)
             task.done = 'doing'
             task.save()
@@ -32,12 +34,14 @@ def editTask(request, id):
     task = get_object_or_404(Task, pk=id)
     form = TaskForm(instance=task)
 
+
     if(request.method == 'POST'):
         form = TaskForm(request.POST, instance=task)
-
+        messages.info(request, 'Atividade editada com sucesso.')
         if(form.is_valid()):
             task.save()
             return redirect('/')
+            
         else:
             return render(request, 'paginas/edittask.html', {'form': form, 'task': task})
     else:
@@ -46,6 +50,9 @@ def editTask(request, id):
 def deleteTask(request, id):
     task = get_object_or_404(Task, pk=id)
     task.delete()
+
+    messages.info(request, 'Atividade deletada com sucesso.')
+
     return redirect('/')
 
 
