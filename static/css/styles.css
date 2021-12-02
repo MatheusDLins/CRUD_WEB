@@ -4,8 +4,7 @@
 /* Barra de navegação*/
 
 .navbar {
-    border-bottom: 1px solid #333;
-    margin-bottom: 20px;
+    border-bottom: 1px solid #339;
 
 }
 
@@ -15,10 +14,11 @@
 
 .navbar-brand {
     font-weight: bold;
+    margin-left: 10px;
 }
 
 .navbar-light .navbar-nav a.nav-link{
-    color: #333;
+    color: #335;
     letter-spacing: 1px;
 }
 
