@@ -4,7 +4,7 @@
 /* Barra de navegação*/
 
 .navbar {
-    border-bottom: 1px solid #339;
+    border-bottom: 1px solid #333;
 
 }
 
@@ -18,7 +18,7 @@
 }
 
 .navbar-light .navbar-nav a.nav-link{
-    color: #335;
+    color: #333;
     letter-spacing: 1px;
 }
 
@@ -141,4 +141,41 @@ ul.messages li {
 
 .auth-card {
     margin-bottom: 30px;
+}
+
+
+/* rodapé */
+
+.rodape-prin
+{
+    background-color:  #0d6efd;       
+    clear: both;
+    padding: 20px;     
+    height: 100px;    
+    color: rgb(250,255,250);
+    line-height: 50px;
+    font-size: 15px;
+    font-family: "arial", sans-serif;
+}
+
+.icones-sociais li
+{
+    display: inline-block;
+    float: right;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+footer ul {
+    float: right;
+    display: table;
+}
+
+footer ul li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
 }
