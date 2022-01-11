@@ -67,7 +67,3 @@ def deleteTask(request, id):
 
 class PaginaInicial(TemplateView):
     template_name = 'index.html'
-
-
-def yourName(request, name):
-    return render(request, 'paginas/yourname.html', {'name': name})
