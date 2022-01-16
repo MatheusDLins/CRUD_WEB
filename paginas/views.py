@@ -6,7 +6,6 @@ from django.core.paginator import Paginator
 from .models import Task
 from .forms import TaskForm
 from django.contrib import messages
-from django.views.decorators.cache import cache_page
 
 
 def taskList(request):
