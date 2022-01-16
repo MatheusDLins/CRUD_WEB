@@ -1,5 +1,1 @@
-$(document).ready(function(){
-
-    console.log('funcinouuuuuuuu')
-
-});
+fetch('https://apiweb2.duartedark.repl.co/vendas').then(resposta=>{console.log(resposta.json())})

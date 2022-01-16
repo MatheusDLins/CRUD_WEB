@@ -6,6 +6,7 @@ from django.core.paginator import Paginator
 from .models import Task
 from .forms import TaskForm
 from django.contrib import messages
+from django.views.decorators.cache import cache_page
 
 
 def taskList(request):
@@ -63,7 +64,8 @@ def deleteTask(request, id):
 
     return redirect('/')
 
-
+def vendas(request):
+    return render(request, 'vendas.html')
 
 class PaginaInicial(TemplateView):
     template_name = 'index.html'
